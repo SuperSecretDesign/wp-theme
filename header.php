@@ -31,7 +31,7 @@
           'container' => false,
           'theme_locations' => 'primary'
         )); ?>
-        
+        <?php get_search_form();?>
       </div>
     </div>
 
