@@ -1,6 +1,7 @@
 <footer>
   <div class="container">
-    <p>&copy; HackerYou <?php echo date('Y'); ?></p>
+  	<!-- Is there a way to make the company name a variable and set/change it in the Dashboard? -->
+    <p><?php echo date('Y'); ?> SSD Inc All Rights Reserved</p>
     <?php  wp_nav_menu(array(
       'container' => 'nav', 
       'container_id' => 'nav',
