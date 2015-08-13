@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
 <div class="main">
-  <div class="container">
+  <div class="container text-center">
 
     <div class="content">
       <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
@@ -10,7 +10,8 @@
           <h1 class="entry-title"><?php the_title(); ?></h1>
 
           <div class="entry-meta">
-            <?php hackeryou_posted_on(); ?>
+          <p><?php echo human_time_diff( get_the_time('U'), current_time('timestamp') ) . ' ago'; ?>, By <a href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ) ); ?>"><?php the_author(); ?></a>  </p>
+            <!-- <?php hackeryou_posted_on(); ?> -->
           </div><!-- .entry-meta -->
 
           <div class="entry-content">
