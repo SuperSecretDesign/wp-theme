@@ -8,10 +8,10 @@ app.searchBar = function() {
 	})
 };
 
-app.init = function()
- {
+app.init = function(){
  	app.searchBar();
- }
+};
+
 $(function(){
 	//your jQuery here
 	app.init();
