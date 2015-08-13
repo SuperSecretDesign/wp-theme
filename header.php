@@ -26,7 +26,7 @@
 
     <?php wp_nav_menu( array(
       'container' => false,
-      'theme_locations' => 'primary'
+      'theme_location' => 'primary'
     )); ?>
   </div> <!-- /.container -->
 </header><!--/.header-->
