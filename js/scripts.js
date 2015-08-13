@@ -1,10 +1,10 @@
 var app = {};
 
 app.searchBar = function() {
-	$('#searchform').hide();
+	$('#searchInput').hide();
 	$('.toggleSearch').on('click', function(evnt) {
 		evnt.preventDefault();
-		$('#searchform').toggle();
+		$('#searchInput').slideToggle();
 	})
 };
 
