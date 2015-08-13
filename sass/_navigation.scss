@@ -5,10 +5,14 @@ ul#menu-header-menu {
 		display: inline;
 		margin-right: 10px;
 		a {
-			color: #333;
+			color: black;
+			text-transform: uppercase;
 			padding: 10px;
-			background: #333;
-			color: white;
+			// background: #333;
+			// color: white;
+			&:hover {
+				border-bottom: 2px solid black;
+			}
 		}
 	}
 }
