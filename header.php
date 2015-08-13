@@ -34,7 +34,7 @@
           </a>
         </h1>
       </div>
-      <div class="col-xs-5 vcenter">
+      <div class="col-xs-5 vcenter text-center">
         <?php wp_nav_menu( array(
           'container' => false,
           'theme_location' => 'primary'

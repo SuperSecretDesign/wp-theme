@@ -12,3 +12,10 @@
     position: relative;
     top: 40px;
 }
+
+.toggleSearch {
+	color: black;
+	&:hover {
+		color:grey;
+	}
+}
