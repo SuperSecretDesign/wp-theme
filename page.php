@@ -1,7 +1,5 @@
 <?php get_header();  ?>
 
-<p>Is this the page?</p>
-
 <div class="main">
   <div class="container">
 

@@ -19,18 +19,20 @@
 <header>
   <div class="container">
     <div class="row clearfix">
-      <div class="col-xs-6">
+      <div class="col-xs-5">
         <h1>
           <a href="<?php echo home_url( '/' ); ?>" title="<?php bloginfo( 'name', 'display' ); ?>" rel="home">
             <?php bloginfo( 'name' ); ?>
           </a>
         </h1>
       </div>
-      <div class="col-xs-6">
+      <div class="col-xs-5">
         <?php wp_nav_menu( array(
           'container' => false,
           'theme_location' => 'primary'
         )); ?>
+      </div>
+      <div class="col-xs-2">
         <?php get_search_form();?>
       </div>
     </div>
