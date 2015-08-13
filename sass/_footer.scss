@@ -18,10 +18,6 @@ footer {
 	clear:both;
 	#nav {
 		text-align: center;
-		// .site-logo img {
-		// 	display: block;
-		// 	margin:0 auto;
-		// }
 		#menu-footer-menu {
 			padding-left: 0;
 			li a {
@@ -29,6 +25,11 @@ footer {
 			}
 		}
 	}
+}
+
+.site-logo img {
+	display: block;
+	margin:0 auto;
 }
 
 .copyright {
