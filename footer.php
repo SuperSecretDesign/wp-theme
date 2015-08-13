@@ -13,7 +13,7 @@
 	    </hgroup>
 	<?php endif; ?>
 
-    <p>&copy;<?php echo date('Y'); ?> SSD Inc All Rights Reserved</p>
+    <p class="copyright">&copy;<?php echo date('Y'); ?> SSD Inc All Rights Reserved</p>
     <?php  wp_nav_menu(array(
       'container' => 'nav', 
       'container_id' => 'nav',
