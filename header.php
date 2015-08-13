@@ -29,7 +29,7 @@
       <div class="col-xs-6">
         <?php wp_nav_menu( array(
           'container' => false,
-          'theme_locations' => 'primary'
+          'theme_location' => 'primary'
         )); ?>
         <?php get_search_form();?>
       </div>
