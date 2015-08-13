@@ -21,7 +21,16 @@
       <div class="col-xs-4">
         <h1>
           <a href="<?php echo home_url( '/' ); ?>" title="<?php bloginfo( 'name', 'display' ); ?>" rel="home">
-            <?php bloginfo( 'name' ); ?>
+            <?php if ( get_theme_mod( 'themeslug_logo' ) ) : ?>
+                <div class='site-logo'>
+                    <a href='<?php echo esc_url( home_url( '/' ) ); ?>' title='<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>' rel='home'><img src='<?php echo esc_url( get_theme_mod( 'themeslug_logo' ) ); ?>' alt='<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>'></a>
+                </div>
+            <?php else : ?>
+                <hgroup>
+                     <?php bloginfo( 'name' ); ?>
+                </hgroup>
+            <?php endif; ?>
+
           </a>
         </h1>
       </div>
