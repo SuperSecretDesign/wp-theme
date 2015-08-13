@@ -1,6 +1,11 @@
 <footer>
   <div class="container">
     <p>&copy; HackerYou <?php echo date('Y'); ?></p>
+    <?php  wp_nav_menu(array(
+      'container' => 'nav', 
+      'container_id' => 'nav',
+      'theme_location' => 'secondary'
+    ));?>
   </div>
 </footer>
 
