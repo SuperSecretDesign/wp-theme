@@ -1,0 +1,67 @@
+/*
+====================================
+Blog Post Styling
+====================================
+*/
+.entry-title {
+	font-family: 'Playfair Display', serif;
+	color:  #292f33;
+	font-size: 60px;/* Approximation due to font substitution */
+	font-weight: 700;
+	line-height: 72px;/* Approximation due to font substitution */
+}
+
+.entry-meta {
+	display: inline-block;
+	font-family: DroidSerif;
+	color:  #8899a6;
+	font-size: 16px;/* Approximation due to font substitution */
+	font-style: italic;
+	line-height: 32px;/* Approximation due to font substitution */
+	a {
+		font-family: DroidSerif;
+		color:  #ff2641;
+		font-size: 16px;/* Approximation due to font substitution */
+		font-style: italic;
+		line-height: 32px;/* Approximation due to font substitution */
+	}
+}
+.entry-meta p::before {
+		content: "  ";
+		display: inline-block;
+		width: 100px;
+		height: 2px;
+		background: grey;
+		position: relative;
+		bottom: 3px;
+		right: 70px;
+	}
+.entry-meta p::after {
+		content: "  ";
+		display: inline-block;
+		width: 100px;
+		height: 2px;
+		background: grey;
+		position: relative;
+		bottom: 3px;
+		left: 70px;
+	}
+
+.entry-content {
+	font-family: DroidSerif;
+	color:  #66757f;
+	font-size: 16px;/* Approximation due to font substitution */
+	font-weight: 400;
+	line-height: 32px;/* Approximation due to font substitution */
+	text-align: left;
+	blockquote {
+		background: none;
+		font-family: PlayfairDisplay;
+		color:  #292f33;
+		font-size: 36px;/* Approximation due to font substitution */
+		font-style: italic;
+		line-height: 48px;/* Approximation due to font substitution */
+		text-align: center;
+	}
+}
+
