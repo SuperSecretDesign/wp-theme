@@ -59,17 +59,58 @@ h2.subsequent a {
 	text-decoration:none;
 }
 
-article.first-post,
-article.sub-post {
-	width: 50%;
-	border:2px solid pink;
+article.first-post {
+	// width: 50%;
+	// border:2px solid pink;
 	float: left;
-	height: 400px;
+	height: 570px;
+	width: 570px;
+	margin-right: 30px;
+	margin-bottom: 30px;
+}
+
+article.sub-post {
+	float: left;
+	width: 570px;
+	height: 270px;
+	background-color: #f3f6f8;
 }
 
 article.sub-post-col {
-	width: 25%;
-	border:2px solid purple;
+	// width: 25%;
+	// border:2px solid purple;
 	float: left;
-	height: 400px;
+	height: 570px;
+	width: 270px;
+	background-color: #cad4db;
+}
+
+.title-mini {
+	width: 270px;
+	height: 270px;
+}
+
+.title-mini-float {
+	float: left;
+}
+
+figure.horizontal,
+.filler-div-h {
+	width: 300px;
+	height: 270px;
+	float: left;
+}
+
+figure.vertical,
+.filler-div-v {
+	width: 270px;
+	height: 300px;
+}
+
+.filler-div {
+	background-color: #ffefd5;
+}
+
+.margin-right {
+	margin-right: 30px;
 }
