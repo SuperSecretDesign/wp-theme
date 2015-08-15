@@ -1,0 +1,54 @@
+/*
+====================================
+About Page Styling
+====================================
+*/
+.about-text1 {
+	padding: 30px 0;
+}
+.about h2 {
+	font-family: PlayfairDisplay;
+	color:  #292f33;
+	font-size: 34px;/* Approximation due to font substitution */
+	font-weight: 400;
+	line-height: 40px;/* Approximation due to font substitution */
+	text-align: left;
+}
+.about p {
+	font-family: DroidSerif;
+	color:  #66757f;
+	font-size: 16px;/* Approximation due to font substitution */
+	font-weight: 400;
+	line-height: 32px;/* Approximation due to font substitution */
+	text-align: left;
+}
+.about h3 {
+	font-family: PlayfairDisplay;
+	color:  #292f33;
+	font-size: 32px;/* Approximation due to font substitution */
+	font-weight: 400;
+	line-height: 48px;/* Approximation due to font substitution */
+	text-align: left;
+	margin: 5px 0;
+}
+.about h5 {
+	font-family: Roboto;
+	color:  #292f33;
+	font-size: 16px;/* Approximation due to font substitution */
+	font-weight: 700;
+	line-height: 28px;/* Approximation due to font substitution */
+	text-align: left;
+	text-transform: uppercase;
+}
+.about-team {
+	background: #F3F6F9;
+	padding: 30px 60px;
+}
+
+.about-headshot {
+	border-radius: 50%;
+}
+
+.about-join {
+	padding: 50px 0;
+}
