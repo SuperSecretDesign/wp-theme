@@ -64,4 +64,93 @@ Blog Post Styling
 		text-align: center;
 	}
 }
+.synved-social-container {
+	display: inherit;
+	text-align:center;
+}
+.entry-utility {
+
+	margin: 35px 0;
+	height: 140px;
+	border-bottom: 2px solid #ccd6dd;
+}
+.tags {
+	text-align: left;
+	p {
+		font-family: DroidSerif;
+		color:  #ccd6dd;
+		font-size: 16px;/* Approximation due to font substitution */
+		font-style: italic;
+		line-height: 38px;/* Approximation due to font substitution */
+	}
+	a {
+		font-family: DroidSerif;
+		color:  #8899a6;
+		font-size: 14px;/* Approximation due to font substitution */
+		font-weight: 400;
+		line-height: 28px;/* Approximation due to font substitution */
+		padding: 10px;
+		border-radius: 5px;
+		border: 2px solid #ccd6dd;
+		margin-top: 10px;
+		margin-bottom: 10px;
+	}
+}
+
+.wp-post-image {
+	height: 200px;
+	width: 266px;
+}
+.single-nav a {
+	font-family: PlayfairDisplay;
+	color:  black;
+	font-size: 24px;/* Approximation due to font substitution */
+	font-weight: 400;
+	line-height: 38px;/* Approximation due to font substitution */
+}
+
+.author-info {
+	text-align:left;
+}
+
+.avatar	{
+	border-radius: 50%;
+}
+
+.single-author {
+	font-family: PlayfairDisplay;
+	color:  #292f33;
+	font-size: 24px;/* Approximation due to font substitution */
+	font-weight: 400;
+	line-height: 38px;/* Approximation due to font substitution */
+}
+
+.single-bio {
+	font-family: DroidSerif;
+	color:  #8899a6;
+	font-size: 14px;/* Approximation due to font substitution */
+	font-weight: 400;
+	line-height: 28px;/* Approximation due to font substitution */
+	text-align: left;
+}
+
+.more-posts {
+	position:relative;
+	top:104px;
+	li {
+		padding: 10px;
+		// list-style: none;
+	}
+	a{
+		color: black;
+		&:hover {
+			border-bottom: 2px solid black;
+		}
+	}
+}
+
+
+
+
+
 

@@ -11,8 +11,8 @@ function theme_setup() {
 	*  a square size (also below). You can add more of your own crop
 	*  sizes with add_image_size. */
 	add_theme_support( 'post-thumbnails' );
-	set_post_thumbnail_size( 50, 50);
-	// set_post_thumbnail_size(120, 90, true);
+	// set_post_thumbnail_size(266, 200, true);
+	// set_post_thumbnail_size(200, 0, true);
 	add_image_size('square', 150, 150, true);
 	add_image_size('thumb', 50, 50, true);
 	
@@ -126,6 +126,23 @@ function themeslug_theme_customizer( $wp_customize ) {
 
 }
 add_action( 'customize_register', 'themeslug_theme_customizer' );
+
+
+// Related posts by the same author
+function get_related_author_posts() {
+    global $authordata, $post;
+
+    $authors_posts = get_posts( array( 'author' => $authordata->ID, 'post__not_in' => array( $post->ID ), 'posts_per_page' => 5 ) );
+
+    $output = '<ul>';
+    foreach ( $authors_posts as $authors_post ) {
+        $output .= '<li><a href="' . get_permalink( $authors_post->ID ) . '">' . apply_filters( 'the_title', $authors_post->post_title, $authors_post->ID ) . '</a></li>';
+    }
+    $output .= '</ul>';
+
+    return $output;
+}
+
 
 
 /* Custom Title Tags */
@@ -261,11 +278,11 @@ function hackeryou_posted_in() {
 	// Retrieves tag list of current post, separated by commas.
 	$tag_list = get_the_tag_list( '', ', ' );
 	if ( $tag_list ) {
-		$posted_in = 'This entry was posted in %1$s and tagged %2$s. Bookmark the <a href="%3$s" title="Permalink to %4$s" rel="bookmark">permalink</a>.';
+		$posted_in = 'Tags %2$s.';
 	} elseif ( is_object_in_taxonomy( get_post_type(), 'category' ) ) {
-		$posted_in = 'This entry was posted in %1$s. Bookmark the <a href="%3$s" title="Permalink to %4$s" rel="bookmark">permalink</a>.';
+		$posted_in = 'This entry was posted in %1$s.';
 	} else {
-		$posted_in = 'Bookmark the <a href="%3$s" title="Permalink to %4$s" rel="bookmark">permalink</a>.';
+		$posted_in = '';
 	}
 	// Prints the string, replacing the placeholders.
 	printf(
