@@ -4,14 +4,21 @@ Blog Page Styling
 ====================================
 */
 
-article h2 a {
-	text-decoration: none;
-	font-family: PlayfairDisplay;
-	color:  #292f33;
-	font-size: 72px;/* Approximation due to font substitution */
-	font-weight: 400;
-	line-height: 64px;/* Approximation due to font substitution */
-	text-align: left;
+h2.first {
+	margin-top: 0;	
+	a {
+		text-decoration: none;
+		font-family: PlayfairDisplay;
+		color:  #292f33;
+		font-size: 72px;/* Approximation due to font substitution */
+		font-weight: 400;
+		line-height: 64px;/* Approximation due to font substitution */
+		// text-align: left;
+	}
+}
+
+.lnr-arrow-right {
+	display: block;
 }
 
 .excerpt-content p {
@@ -21,6 +28,7 @@ article h2 a {
 	font-weight: 400;
 	line-height: 28px;/* Approximation due to font substitution */
 	text-align: left;
+	margin: 0;
 }
 
 .lnr-arrow-right {
@@ -36,13 +44,14 @@ h2.subsequent a {
 	text-align: left;
 }
 
-.sub-entry-meta {
+.sub-entry-meta p {
 	font-family: DroidSerif;
 	color:  #ccd6dd;
 	font-size: 14px;/* Approximation due to font substitution */
 	font-style: italic;
 	line-height: 28px;/* Approximation due to font substitution */
 	text-align: left;
+	margin-top: 0;
 }
 
 .sub-entry-meta p a {
