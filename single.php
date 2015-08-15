@@ -7,7 +7,7 @@
       <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
 
         <div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-          <h1 class="entry-title"><?php the_title(); ?></h1>
+          <h1 class="entry-title-single"><?php the_title(); ?></h1>
 
           <div class="entry-meta">
           <p><?php echo human_time_diff( get_the_time('U'), current_time('timestamp') ) . ' ago'; ?>, By <a href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ) ); ?>"><?php the_author(); ?></a>  </p>
@@ -40,7 +40,7 @@
 
         <div id="nav-below" class="navigation">
           <div class="row clearfix">
-            <div class="col-xs-12 col-sm-6 single-padding-left single-nav">
+            <div class="col-xs-12 col-sm-6 single-nav">
               <img src="" alt="">
               <?php
               $prevPost = get_previous_post();
@@ -48,7 +48,7 @@
               <p class="nav-previous"><?php previous_post_link('%link',$prevthumbnail); ?></p>
               <p class="nav-previous"><?php previous_post_link('%link','&larr; %title'); ?></p>
             </div>
-            <div class="col-xs-12 col-sm-6 single-padding-right single-nav">
+            <div class="col-xs-12 col-sm-6 single-nav">
             <?php
               $nextPost = get_next_post();
               $nextthumbnail = get_the_post_thumbnail($nextPost->ID, 'medium'); ?>
@@ -60,7 +60,7 @@
 
         <div class="author-info">
           <div class="row clearfix">
-            <div class="col-xs-6 single-padding-left">
+            <div class="col-xs-12 col-sm-6">
               <div class="row">
                 <p><?php echo get_avatar( get_the_author_meta( 'ID' ), 100); ?><p>
               </div>
@@ -71,7 +71,7 @@
                 <p class='single-bio'><?php echo get_the_author_meta('description'); ?></p>
               </div>
             </div>
-            <div class="col-xs-6 single-padding-right">
+            <div class="col-xs-12 col-sm-6">
               <div class="more-posts">
                 <p class="single-author">
                   More posts by author ...
