@@ -23,8 +23,18 @@
           </div><!-- .entry-content -->
 
           <div class="entry-utility">
-            <?php hackeryou_posted_in(); ?>
-            <?php edit_post_link( 'Edit', '<span class="edit-link">', '</span>' ); ?>
+            <div class="row">
+              <div class="col-sm-offset-6 col-sm-6 tags">
+                <div class="row">
+                  <p>Tagged:</p>  
+                </div>
+                <div class="row">
+                  <?php echo get_the_tag_list( '', ' ' ); ?>
+                </div>
+              </div>
+            </div>
+           <!--  <?php hackeryou_posted_in(); ?> -->
+           <!-- <?php edit_post_link( 'Edit', '<span class="edit-link">', '</span>' ); ?> -->
           </div><!-- .entry-utility -->
         </div><!-- #post-## -->
 
