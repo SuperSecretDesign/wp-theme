@@ -70,7 +70,7 @@ Blog Post Styling
 }
 .entry-utility {
 
-	margin: 35px 125px;
+	margin: 35px 0;
 	height: 140px;
 	border-bottom: 2px solid #ccd6dd;
 }
@@ -116,12 +116,7 @@ Blog Post Styling
 .avatar	{
 	border-radius: 50%;
 }
-.single-padding-left {
-	padding-left: 125px;
-}
-.single-padding-right {
-	padding-right: 125px;
-}
+
 .single-author {
 	font-family: PlayfairDisplay;
 	color:  #292f33;
@@ -153,9 +148,7 @@ Blog Post Styling
 		}
 	}
 }
-.comments-area {
-	padding: 0 125px;
-}
+
 
 
 
