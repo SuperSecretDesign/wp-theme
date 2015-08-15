@@ -4,14 +4,21 @@ Blog Page Styling
 ====================================
 */
 
-article h2 a {
-	text-decoration: none;
-	font-family: PlayfairDisplay;
-	color:  #292f33;
-	font-size: 72px;/* Approximation due to font substitution */
-	font-weight: 400;
-	line-height: 64px;/* Approximation due to font substitution */
-	text-align: left;
+h2.first {
+	margin-top: 0;	
+	a {
+		text-decoration: none;
+		font-family: PlayfairDisplay;
+		color:  #292f33;
+		font-size: 72px;/* Approximation due to font substitution */
+		font-weight: 400;
+		line-height: 64px;/* Approximation due to font substitution */
+		// text-align: left;
+	}
+}
+
+.lnr-arrow-right {
+	display: block;
 }
 
 .excerpt-content p {
@@ -21,6 +28,7 @@ article h2 a {
 	font-weight: 400;
 	line-height: 28px;/* Approximation due to font substitution */
 	text-align: left;
+	margin: 0;
 }
 
 .lnr-arrow-right {
@@ -36,13 +44,14 @@ h2.subsequent a {
 	text-align: left;
 }
 
-.sub-entry-meta {
+.sub-entry-meta p {
 	font-family: DroidSerif;
 	color:  #ccd6dd;
 	font-size: 14px;/* Approximation due to font substitution */
 	font-style: italic;
 	line-height: 28px;/* Approximation due to font substitution */
 	text-align: left;
+	margin-top: 0;
 }
 
 .sub-entry-meta p a {
@@ -50,17 +59,59 @@ h2.subsequent a {
 	text-decoration:none;
 }
 
-article.first-post,
-article.sub-post {
-	width: 50%;
-	border:2px solid pink;
+article.first-post {
+	// width: 50%;
+	// border:2px solid pink;
 	float: left;
-	height: 400px;
+	height: 570px;
+	width: 570px;
+	margin-right: 15px;
+	margin-bottom: 15px;
+	background-color: pink;
+}
+
+article.sub-post {
+	float: left;
+	width: 570px;
+	height: 270px;
+	background-color: #f3f6f8;
 }
 
 article.sub-post-col {
-	width: 25%;
-	border:2px solid purple;
+	// width: 25%;
+	// border:2px solid purple;
 	float: left;
-	height: 400px;
+	height: 570px;
+	width: 270px;
+	background-color: #cad4db;
+}
+
+.title-mini {
+	width: 270px;
+	height: 270px;
+}
+
+.title-mini-float {
+	float: left;
+}
+
+figure.horizontal,
+.filler-div-h {
+	width: 300px;
+	height: 270px;
+	float: left;
+}
+
+figure.vertical,
+.filler-div-v {
+	width: 270px;
+	height: 300px;
+}
+
+.filler-div {
+	background-color: #ffefd5;
+}
+
+.margin-right {
+	margin-right: 15px;
 }

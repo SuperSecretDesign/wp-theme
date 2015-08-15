@@ -2,16 +2,9 @@
 <?php get_header(); ?>
 
 <div class="main">
-  <div class="container">
-
-    <div class="content">
-    	<div class="row">
-    		<?php get_template_part( 'loop', 'index' );	?>
-    	</div>
-    </div> <!--/.content -->
-
+  <div class="container clearfix">
+    <?php get_template_part( 'loop', 'index' );	?>
     <!-- <?php get_sidebar(); ?> -->
-
   </div> <!-- /.container -->
 </div> <!-- /.main -->
 

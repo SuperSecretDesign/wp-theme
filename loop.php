@@ -14,6 +14,20 @@
 
 <?php // if there are posts, Start the Loop. ?>
 
+<?php
+	$classes = array(
+		'sub-post',
+		'clearfix'
+	);
+?>
+
+<?php
+	$classes_two = array(
+		'sub-post-col',
+		'margin-right'
+	);
+?>
+
 <?php $count = 0; ?>
 	
 	<?php while ( have_posts() ) : the_post(); ?>
@@ -35,33 +49,38 @@
 
 		<?php } elseif ($count === 2) { ?>
 
-			<article id="post-<?php the_ID(); ?>" <?php post_class('sub-post-col'); ?>>
-				<?php 
+			<article id="post-<?php the_ID(); ?>" <?php post_class( $classes_two ); ?>>
+				<div class="title-mini">
+					<div class="sub-entry-meta">
+					<p><?php echo human_time_diff( get_the_time('U'), current_time('timestamp') ) . ' ago'; ?>, By <a href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ) ); ?>"><?php the_author(); ?></a>  </p>
+					  <!-- <?php hackeryou_posted_on(); ?> -->
+					</div><!-- .entry-meta -->
+					<h2 class="entry-title subsequent">
+					    <a href="<?php the_permalink(); ?>" title="Permalink to: <?php esc_attr(the_title_attribute()); ?>" rel="bookmark"><?php the_title(); ?></a>
+					</h2>
+				</div>
+				<figure class="vertical">
+					<?php 
 				if ( has_post_thumbnail() ) { // check if the post has a Post Thumbnail assigned to it.
 					the_post_thumbnail();
 				} else { ?>
-					<div class="filler-div"></div>
+					<div class="filler-div filler-div-v"></div>
 				<?php } ?>
-				<div class="sub-entry-meta">
-				<p><?php echo human_time_diff( get_the_time('U'), current_time('timestamp') ) . ' ago'; ?>, By <a href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ) ); ?>"><?php the_author(); ?></a>  </p>
-				  <!-- <?php hackeryou_posted_on(); ?> -->
-				</div><!-- .entry-meta -->
-				<h2 class="entry-title subsequent">
-				    <a href="<?php the_permalink(); ?>" title="Permalink to: <?php esc_attr(the_title_attribute()); ?>" rel="bookmark"><?php the_title(); ?></a>
-				</h2>
+				</figure>
 			</article>
 
 		<?php } elseif ($count === 3) { ?>
 
-				<article id="post-<?php the_ID(); ?>" <?php post_class('sub-post-col'); ?>>
-					
+			<article id="post-<?php the_ID(); ?>" <?php post_class('sub-post-col'); ?>>
+				<figure class="vertical">
 					<?php 
 					if ( has_post_thumbnail() ) { // check if the post has a Post Thumbnail assigned to it.
 						the_post_thumbnail();
 					} else { ?>
-						<div class="filler-div"></div>
+						<div class="filler-div filler-div-v"></div>
 					<?php } ?>
-
+				</figure>
+				<div class="title-mini">
 					<div class="sub-entry-meta">
 					<p><?php echo human_time_diff( get_the_time('U'), current_time('timestamp') ) . ' ago'; ?>, By <a href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ) ); ?>"><?php the_author(); ?></a>  </p>
 					  <!-- <?php hackeryou_posted_on(); ?> -->
@@ -70,42 +89,51 @@
 					<h2 class="entry-title subsequent">
 					    <a href="<?php the_permalink(); ?>" title="Permalink to: <?php esc_attr(the_title_attribute()); ?>" rel="bookmark"><?php the_title(); ?></a>
 					</h2>
-				</article>
+				</div>
+			</article>
 
 		<?php } elseif ($count === 4) { ?>
 
-			<article id="post-<?php the_ID(); ?>" <?php post_class('sub-post'); ?>>
-				<div class="sub-entry-meta">
-				<p><?php echo human_time_diff( get_the_time('U'), current_time('timestamp') ) . ' ago'; ?>, By <a href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ) ); ?>"><?php the_author(); ?></a>  </p>
-				  <!-- <?php hackeryou_posted_on(); ?> -->
-				</div><!-- .entry-meta -->
-				<h2 class="entry-title subsequent">
-				    <a href="<?php the_permalink(); ?>" title="Permalink to: <?php esc_attr(the_title_attribute()); ?>" rel="bookmark"><?php the_title(); ?></a>
-				</h2>
-				<?php 
-				if ( has_post_thumbnail() ) { // check if the post has a Post Thumbnail assigned to it.
-					the_post_thumbnail();
-				} else { ?>
-					<div class="filler-div"></div>
-				<?php } ?>
+			<article id="post-<?php the_ID(); ?>" <?php post_class( $classes ); ?>>
+				<div class="title-mini title-mini-float">
+					<div class="sub-entry-meta">
+					<p><?php echo human_time_diff( get_the_time('U'), current_time('timestamp') ) . ' ago'; ?>, By <a href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ) ); ?>"><?php the_author(); ?></a>  </p>
+					  <!-- <?php hackeryou_posted_on(); ?> -->
+					</div><!-- .entry-meta -->
+					<h2 class="entry-title subsequent">
+					    <a href="<?php the_permalink(); ?>" title="Permalink to: <?php esc_attr(the_title_attribute()); ?>" rel="bookmark"><?php the_title(); ?></a>
+					</h2>
+				</div>
+				<figure class="horizontal">
+					<?php 
+					if ( has_post_thumbnail() ) { // check if the post has a Post Thumbnail assigned to it.
+						the_post_thumbnail();
+					} else { ?>
+						<div class="filler-div filler-div-h"></div>
+					<?php } ?>
+				</figure>
 			</article>
 			
 		<?php } else { ?>
 
-			<article id="post-<?php the_ID(); ?>" <?php post_class('sub-post'); ?>>
-				<?php 
-				if ( has_post_thumbnail() ) { // check if the post has a Post Thumbnail assigned to it.
-					the_post_thumbnail();
-				} else { ?>
-					<div class="filler-div"></div>
-				<?php } ?>
-				<div class="sub-entry-meta">
-				<p><?php echo human_time_diff( get_the_time('U'), current_time('timestamp') ) . ' ago'; ?>, By <a href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ) ); ?>"><?php the_author(); ?></a>  </p>
-				  <!-- <?php hackeryou_posted_on(); ?> -->
-				</div><!-- .entry-meta -->
-				<h2 class="entry-title subsequent">
-				    <a href="<?php the_permalink(); ?>" title="Permalink to: <?php esc_attr(the_title_attribute()); ?>" rel="bookmark"><?php the_title(); ?></a>
-				</h2>
+			<article id="post-<?php the_ID(); ?>" <?php post_class( $classes ); ?>>
+				<div class="title-mini title-mini-float">
+					<div class="sub-entry-meta">
+					<p><?php echo human_time_diff( get_the_time('U'), current_time('timestamp') ) . ' ago'; ?>, By <a href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ) ); ?>"><?php the_author(); ?></a>  </p>
+					  <!-- <?php hackeryou_posted_on(); ?> -->
+					</div><!-- .entry-meta -->
+					<h2 class="entry-title subsequent">
+					    <a href="<?php the_permalink(); ?>" title="Permalink to: <?php esc_attr(the_title_attribute()); ?>" rel="bookmark"><?php the_title(); ?></a>
+					</h2>
+				</div>
+				<figure class="horizontal">
+					<?php 
+					if ( has_post_thumbnail() ) { // check if the post has a Post Thumbnail assigned to it.
+						the_post_thumbnail();
+					} else { ?>
+						<div class="filler-div filler-div-h"></div>
+					<?php } ?>
+				</figure>
 			</article>
 
 		<?php } ?>
