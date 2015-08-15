@@ -132,7 +132,7 @@ add_action( 'customize_register', 'themeslug_theme_customizer' );
 function get_related_author_posts() {
     global $authordata, $post;
 
-    $authors_posts = get_posts( array( 'author' => $authordata->ID, 'post__not_in' => array( $post->ID ), 'posts_per_page' => 5 ) );
+    $authors_posts = get_posts( array( 'author' => $authordata->ID, 'post__not_in' => array( $post->ID ), 'posts_per_page' => 3 ) );
 
     $output = '<ul>';
     foreach ( $authors_posts as $authors_post ) {
