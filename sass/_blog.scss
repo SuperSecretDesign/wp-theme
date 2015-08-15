@@ -49,3 +49,18 @@ h2.subsequent a {
 	color:  #ff2641;
 	text-decoration:none;
 }
+
+article.first-post,
+article.sub-post {
+	width: 50%;
+	border:2px solid pink;
+	float: left;
+	height: 400px;
+}
+
+article.sub-post-col {
+	width: 25%;
+	border:2px solid purple;
+	float: left;
+	height: 400px;
+}
