@@ -26,7 +26,7 @@
 					<h2 class="entry-title first">
 					    <a href="<?php the_permalink(); ?>" title="Permalink to: <?php esc_attr(the_title_attribute()); ?>" rel="bookmark"><?php the_title(); ?></a>
 					</h2>
-					<section class="entry-content">
+					<section class="excerpt-content">
 						<?php the_excerpt(); ?>
 					</section><!-- .entry-content -->
 				</article><!-- #post-## -->
@@ -44,8 +44,12 @@
 						<div class="filler-div"></div>
 					<?php } ?>
 
+					<div class="sub-entry-meta">
+					<p><?php echo human_time_diff( get_the_time('U'), current_time('timestamp') ) . ' ago'; ?>, By <a href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ) ); ?>"><?php the_author(); ?></a>  </p>
+					  <!-- <?php hackeryou_posted_on(); ?> -->
+					</div><!-- .entry-meta -->
 
-					<h2 class="entry-title green">
+					<h2 class="entry-title subsequent">
 					    <a href="<?php the_permalink(); ?>" title="Permalink to: <?php esc_attr(the_title_attribute()); ?>" rel="bookmark"><?php the_title(); ?></a>
 					</h2>
 				</article>
@@ -61,7 +65,12 @@
 						<div class="filler-div"></div>
 					<?php } ?>
 
-					<h2 class="entry-title yellow">
+					<div class="sub-entry-meta">
+					<p><?php echo human_time_diff( get_the_time('U'), current_time('timestamp') ) . ' ago'; ?>, By <a href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ) ); ?>"><?php the_author(); ?></a>  </p>
+					  <!-- <?php hackeryou_posted_on(); ?> -->
+					</div><!-- .entry-meta -->
+
+					<h2 class="entry-title subsequent">
 					    <a href="<?php the_permalink(); ?>" title="Permalink to: <?php esc_attr(the_title_attribute()); ?>" rel="bookmark"><?php the_title(); ?></a>
 					</h2>
 				</article>
@@ -69,7 +78,13 @@
 			<?php } elseif ($count === 4) { ?>
 
 				<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-					<h2 class="entry-title blue">
+
+					<div class="sub-entry-meta">
+					<p><?php echo human_time_diff( get_the_time('U'), current_time('timestamp') ) . ' ago'; ?>, By <a href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ) ); ?>"><?php the_author(); ?></a>  </p>
+					  <!-- <?php hackeryou_posted_on(); ?> -->
+					</div><!-- .entry-meta -->
+
+					<h2 class="entry-title subsequent">
 					    <a href="<?php the_permalink(); ?>" title="Permalink to: <?php esc_attr(the_title_attribute()); ?>" rel="bookmark"><?php the_title(); ?></a>
 					</h2>
 					
@@ -95,7 +110,12 @@
 						<div class="filler-div"></div>
 					<?php } ?>
 
-					<h2 class="entry-title orange">
+					<div class="sub-entry-meta">
+					<p><?php echo human_time_diff( get_the_time('U'), current_time('timestamp') ) . ' ago'; ?>, By <a href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ) ); ?>"><?php the_author(); ?></a>  </p>
+					  <!-- <?php hackeryou_posted_on(); ?> -->
+					</div><!-- .entry-meta -->
+
+					<h2 class="entry-title subsequent">
 					    <a href="<?php the_permalink(); ?>" title="Permalink to: <?php esc_attr(the_title_attribute()); ?>" rel="bookmark"><?php the_title(); ?></a>
 					</h2>
 				</article>
