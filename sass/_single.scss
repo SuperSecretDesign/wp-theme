@@ -3,7 +3,7 @@
 Blog Post Styling
 ====================================
 */
-.entry-title {
+.entry-title-single {
 	font-family: 'Playfair Display', serif;
 	color:  #292f33;
 	font-size: 60px;/* Approximation due to font substitution */
@@ -151,7 +151,7 @@ Blog Post Styling
 }
 @media (min-width: 767px) {
 	.more-posts {
-		top: 120px;
+		top: 120mpx;
 	}
 }
 
