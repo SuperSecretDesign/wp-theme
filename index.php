@@ -2,7 +2,7 @@
 <?php get_header(); ?>
 
 <div class="main">
-  <div class="container">
+  <div class="container clearfix">
     <?php get_template_part( 'loop', 'index' );	?>
     <!-- <?php get_sidebar(); ?> -->
   </div> <!-- /.container -->
