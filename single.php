@@ -23,14 +23,37 @@
           </div><!-- .entry-content -->
 
           <div class="entry-utility">
-            <?php hackeryou_posted_in(); ?>
-            <?php edit_post_link( 'Edit', '<span class="edit-link">', '</span>' ); ?>
+            <div class="row clearfix">
+              <div class="col-sm-offset-6 col-sm-6 tags">
+                <div class="row">
+                  <p>Tagged:</p>  
+                </div>
+                <div class="row">
+                  <?php echo get_the_tag_list( '', ' ' ); ?>
+                </div>
+              </div>
+            </div>
+           <!--  <?php hackeryou_posted_in(); ?> -->
+           <!-- <?php edit_post_link( 'Edit', '<span class="edit-link">', '</span>' ); ?> -->
           </div><!-- .entry-utility -->
         </div><!-- #post-## -->
 
         <div id="nav-below" class="navigation">
-          <p class="nav-previous"><?php previous_post_link('%link', '&larr; %title'); ?></p>
-          <p class="nav-next"><?php next_post_link('%link', '%title &rarr;'); ?></p>
+          <div class="row clearfix">
+            <div class="col-xs-6">
+              <img src="" alt="">
+              <?php
+              $prevPost = get_previous_post();
+              $prevthumbnail = get_the_post_thumbnail($prevPost->ID, 'medium'); ?>
+              <p class="nav-previous"><?php previous_post_link('%link',$prevthumbnail); ?></p>
+            </div>
+            <div class="col-xs-6">
+            <?php
+              $nextPost = get_next_post();
+              $nextthumbnail = get_the_post_thumbnail($nextPost->ID, 'medium'); ?>
+              <p class="nav-next"><?php next_post_link('%link', $nextthumbnail, '%title &rarr;'); ?></p> 
+            </div>
+          </div>
         </div><!-- #nav-below -->
 
         <?php comments_template( '', true ); ?>

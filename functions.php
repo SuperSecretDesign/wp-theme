@@ -11,8 +11,8 @@ function theme_setup() {
 	*  a square size (also below). You can add more of your own crop
 	*  sizes with add_image_size. */
 	add_theme_support( 'post-thumbnails' );
-	set_post_thumbnail_size( 50, 50);
-	// set_post_thumbnail_size(120, 90, true);
+	// set_post_thumbnail_size(266, 200, true);
+	// set_post_thumbnail_size(200, 0, true);
 	add_image_size('square', 150, 150, true);
 	add_image_size('thumb', 50, 50, true);
 	
@@ -261,11 +261,11 @@ function hackeryou_posted_in() {
 	// Retrieves tag list of current post, separated by commas.
 	$tag_list = get_the_tag_list( '', ', ' );
 	if ( $tag_list ) {
-		$posted_in = 'This entry was posted in %1$s and tagged %2$s. Bookmark the <a href="%3$s" title="Permalink to %4$s" rel="bookmark">permalink</a>.';
+		$posted_in = 'Tags %2$s.';
 	} elseif ( is_object_in_taxonomy( get_post_type(), 'category' ) ) {
-		$posted_in = 'This entry was posted in %1$s. Bookmark the <a href="%3$s" title="Permalink to %4$s" rel="bookmark">permalink</a>.';
+		$posted_in = 'This entry was posted in %1$s.';
 	} else {
-		$posted_in = 'Bookmark the <a href="%3$s" title="Permalink to %4$s" rel="bookmark">permalink</a>.';
+		$posted_in = '';
 	}
 	// Prints the string, replacing the placeholders.
 	printf(
