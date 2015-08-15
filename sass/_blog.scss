@@ -4,7 +4,8 @@ Blog Page Styling
 ====================================
 */
 
-article h2.first {
+article h2 a {
+	text-decoration: none;
 	font-family: PlayfairDisplay;
 	color:  #292f33;
 	font-size: 72px;/* Approximation due to font substitution */
@@ -13,18 +14,38 @@ article h2.first {
 	text-align: left;
 }
 
-article h2.green {
-	background-color: green;
+.excerpt-content p {
+	font-family: DroidSerif;
+	color:  #66757f;
+	font-size: 16px;/* Approximation due to font substitution */
+	font-weight: 400;
+	line-height: 28px;/* Approximation due to font substitution */
+	text-align: left;
 }
 
-article h2.yellow {
-	background-color: yellow;
+.lnr-arrow-right {
+	color:#292f33;
 }
 
-article h2.blue {
-	background-color: blue;
+h2.subsequent a {
+	font-family: PlayfairDisplay;
+	color:  #292f33;
+	font-size: 24px;/* Approximation due to font substitution */
+	font-weight: 400;
+	line-height: 38px;/* Approximation due to font substitution */
+	text-align: left;
 }
 
-article h2.orange {
-	background-color: orange;
+.sub-entry-meta {
+	font-family: DroidSerif;
+	color:  #ccd6dd;
+	font-size: 14px;/* Approximation due to font substitution */
+	font-style: italic;
+	line-height: 28px;/* Approximation due to font substitution */
+	text-align: left;
+}
+
+.sub-entry-meta p a {
+	color:  #ff2641;
+	text-decoration:none;
 }

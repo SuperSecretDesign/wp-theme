@@ -88,6 +88,15 @@ function wmpudev_enqueue_icon_stylesheet() {
 add_action( 'wp_enqueue_scripts', 'wmpudev_enqueue_icon_stylesheet' );
 
 
+/* Activating Font Awesome in our scripts */
+
+function wmpudev_enqueue_lnricon_stylesheet() {
+	wp_register_style( 'lnricons', 'https://cdn.linearicons.com/free/1.0.0/icon-font.min.css' );
+	wp_enqueue_style( 'lnricons');
+}
+
+add_action( 'wp_enqueue_scripts', 'wmpudev_enqueue_lnricon_stylesheet' );
+
 // Enqueu Google Fonts
 
 function wpb_add_google_fonts() {
@@ -157,10 +166,10 @@ add_filter( 'wp_page_menu_args', 'hackeryou_page_menu_args' );
 
 
 /*
- * Sets the post excerpt length to 40 characters.
+ * Sets the post excerpt length to 30 characters.
  */
 function hackeryou_excerpt_length( $length ) {
-	return 25;
+	return 30;
 }
 add_filter( 'excerpt_length', 'hackeryou_excerpt_length' );
 
@@ -168,14 +177,14 @@ add_filter( 'excerpt_length', 'hackeryou_excerpt_length' );
  * Returns a "Continue Reading" link for excerpts
  */
 function hackeryou_continue_reading_link() {
-	return ' <a href="'. get_permalink() . '">Continue reading <span class="meta-nav">&rarr;</span></a>';
+	return ' <a href="'. get_permalink() . '"><span class="lnr lnr-arrow-right"></span></a>';
 }
 
 /**
  * Replaces "[...]" (appended to automatically generated excerpts) with an ellipsis and hackeryou_continue_reading_link().
  */
 function hackeryou_auto_excerpt_more( $more ) {
-	return ' &hellip;' . hackeryou_continue_reading_link();
+	return hackeryou_continue_reading_link();
 }
 add_filter( 'excerpt_more', 'hackeryou_auto_excerpt_more' );
 
