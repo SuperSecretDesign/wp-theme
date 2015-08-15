@@ -35,28 +35,17 @@ body {
 	max-width: 1200px;
 	margin: 0 auto;
 }
-.content-container {
-	// max-width: 900px;
-}
 
 .content {
 	max-width: 75%;
 	margin: 0 auto;
 }
 
-
 @media (max-width: 750px) {
     .content {
         max-width: 85%;
     }
 }
-// @media (min-width: 870px) {
-//     .content {
-//         max-width: 600px;
-//     }
-// }
-
-
 
 .full {
 	width: 100%;
