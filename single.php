@@ -24,7 +24,7 @@
 
           <div class="entry-utility">
             <div class="row clearfix">
-              <div class="col-sm-offset-6 col-sm-6 tags">
+              <div class="col-xs-offset-3 col-xs-6 tags">
                 <div class="row">
                   <p>Tagged:</p>  
                 </div>
@@ -40,21 +40,47 @@
 
         <div id="nav-below" class="navigation">
           <div class="row clearfix">
-            <div class="col-xs-6">
+            <div class="col-xs-12 col-sm-6 single-padding-left single-nav">
               <img src="" alt="">
               <?php
               $prevPost = get_previous_post();
               $prevthumbnail = get_the_post_thumbnail($prevPost->ID, 'medium'); ?>
               <p class="nav-previous"><?php previous_post_link('%link',$prevthumbnail); ?></p>
+              <p class="nav-previous"><?php previous_post_link('%link','&larr; %title'); ?></p>
             </div>
-            <div class="col-xs-6">
+            <div class="col-xs-12 col-sm-6 single-padding-right single-nav">
             <?php
               $nextPost = get_next_post();
               $nextthumbnail = get_the_post_thumbnail($nextPost->ID, 'medium'); ?>
               <p class="nav-next"><?php next_post_link('%link', $nextthumbnail, '%title &rarr;'); ?></p> 
+              <p class="nav-next"><?php next_post_link('%link', '%title &rarr;'); ?></p> 
             </div>
           </div>
         </div><!-- #nav-below -->
+
+        <div class="author-info">
+          <div class="row clearfix">
+            <div class="col-xs-6 single-padding-left">
+              <div class="row">
+                <p><?php echo get_avatar( get_the_author_meta( 'ID' ), 100); ?><p>
+              </div>
+              <div class="row">
+                <p class="single-author"><?php echo get_the_author_meta('nickname'); ?></p>
+              </div>
+              <div class="row">
+                <p class='single-bio'><?php echo get_the_author_meta('description'); ?></p>
+              </div>
+            </div>
+            <div class="col-xs-6 single-padding-right">
+              <div class="more-posts">
+                <p class="single-author">
+                  More posts by author ...
+                </p>
+                <?php echo get_related_author_posts(); ?>
+              </div>
+            </div>
+          </div>
+        </div>
 
         <?php comments_template( '', true ); ?>
 
