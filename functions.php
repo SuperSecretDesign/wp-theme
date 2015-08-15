@@ -87,6 +87,16 @@ function wmpudev_enqueue_icon_stylesheet() {
 
 add_action( 'wp_enqueue_scripts', 'wmpudev_enqueue_icon_stylesheet' );
 
+
+// Enqueu Google Fonts
+
+function wpb_add_google_fonts() {
+
+wp_register_style('wpb-googleFonts', 'http://fonts.googleapis.com/css?family=Playfair+Display:400,700,400italic|Roboto|Droid+Serif:400,400italic');
+            wp_enqueue_style( 'wpb-googleFonts');
+        }
+    add_action('wp_print_styles', 'wpb_add_google_fonts');
+
 // Setting up a logo uploader
 
 function themeslug_theme_customizer( $wp_customize ) {

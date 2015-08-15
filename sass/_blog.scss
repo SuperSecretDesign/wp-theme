@@ -1,0 +1,30 @@
+/*
+====================================
+Blog Page Styling
+====================================
+*/
+
+article h2.first {
+	font-family: PlayfairDisplay;
+	color:  #292f33;
+	font-size: 72px;/* Approximation due to font substitution */
+	font-weight: 400;
+	line-height: 64px;/* Approximation due to font substitution */
+	text-align: left;
+}
+
+article h2.green {
+	background-color: green;
+}
+
+article h2.yellow {
+	background-color: yellow;
+}
+
+article h2.blue {
+	background-color: blue;
+}
+
+article h2.orange {
+	background-color: orange;
+}
