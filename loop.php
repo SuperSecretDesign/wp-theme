@@ -23,7 +23,7 @@
 			<?php if ($count === 1) { ?>
 
 				<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-					<h2 class="entry-title">
+					<h2 class="entry-title first">
 					    <a href="<?php the_permalink(); ?>" title="Permalink to: <?php esc_attr(the_title_attribute()); ?>" rel="bookmark"><?php the_title(); ?></a>
 					</h2>
 					<section class="entry-content">
@@ -45,7 +45,7 @@
 					<?php } ?>
 
 
-					<h2 class="entry-title">
+					<h2 class="entry-title green">
 					    <a href="<?php the_permalink(); ?>" title="Permalink to: <?php esc_attr(the_title_attribute()); ?>" rel="bookmark"><?php the_title(); ?></a>
 					</h2>
 				</article>
@@ -61,7 +61,7 @@
 						<div class="filler-div"></div>
 					<?php } ?>
 
-					<h2 class="entry-title">
+					<h2 class="entry-title yellow">
 					    <a href="<?php the_permalink(); ?>" title="Permalink to: <?php esc_attr(the_title_attribute()); ?>" rel="bookmark"><?php the_title(); ?></a>
 					</h2>
 				</article>
@@ -69,13 +69,13 @@
 			<?php } elseif ($count === 4) { ?>
 
 				<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-					<h2 class="entry-title">
+					<h2 class="entry-title blue">
 					    <a href="<?php the_permalink(); ?>" title="Permalink to: <?php esc_attr(the_title_attribute()); ?>" rel="bookmark"><?php the_title(); ?></a>
 					</h2>
 					
 					<?php 
 					if ( has_post_thumbnail() ) { // check if the post has a Post Thumbnail assigned to it.
-						the_post_thumbnail( add_image_size(); );
+						the_post_thumbnail();
 					} else { ?>
 						<div class="filler-div"></div>
 					<?php } ?>
@@ -95,7 +95,7 @@
 						<div class="filler-div"></div>
 					<?php } ?>
 
-					<h2 class="entry-title">
+					<h2 class="entry-title orange">
 					    <a href="<?php the_permalink(); ?>" title="Permalink to: <?php esc_attr(the_title_attribute()); ?>" rel="bookmark"><?php the_title(); ?></a>
 					</h2>
 				</article>
