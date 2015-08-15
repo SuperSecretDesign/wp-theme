@@ -16,95 +16,98 @@
 
 <?php $count = 0; ?>
 
-<?php while ( have_posts() ) : the_post(); ?>
+	<?php while ( have_posts() ) : the_post(); ?>
 
-		<?php $count += 1; ?>
-
-		<div class="main">
-			<div class="container">
-				<div class="row">
-					<div class="col-xs-6">
-						<div class="row post-one">
+			<?php $count += 1; ?>
 							
-							<?php if ($count === 1) { ?>
+			<?php if ($count === 1) { ?>
 
-								<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-									<h2 class="entry-title">
-									    <a href="<?php the_permalink(); ?>" title="Permalink to: <?php esc_attr(the_title_attribute()); ?>" rel="bookmark"><?php the_title(); ?></a>
-									</h2>
-									<section class="entry-content">
-										<?php the_excerpt(); ?>
-									</section><!-- .entry-content -->
-								</article><!-- #post-## -->
+				<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+					<h2 class="entry-title first">
+					    <a href="<?php the_permalink(); ?>" title="Permalink to: <?php esc_attr(the_title_attribute()); ?>" rel="bookmark"><?php the_title(); ?></a>
+					</h2>
+					<section class="entry-content">
+						<?php the_excerpt(); ?>
+					</section><!-- .entry-content -->
+				</article><!-- #post-## -->
 
-								<!-- <?php comments_template( '', true ); ?> -->
+				<!-- <?php comments_template( '', true ); ?> -->
 
-						</div>
-						<div class="row post-two">
+			<?php } elseif ($count === 2) { ?>
 
-							<?php } elseif ($count === 2) { ?>
+				<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+					
+					<?php 
+					if ( has_post_thumbnail() ) { // check if the post has a Post Thumbnail assigned to it.
+						the_post_thumbnail();
+					} else { ?>
+						<div class="filler-div"></div>
+					<?php } ?>
 
-								<img class="post-two-img" src="" alt="">
-								<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-									<h2 class="entry-title">
-									    <a href="<?php the_permalink(); ?>" title="Permalink to: <?php esc_attr(the_title_attribute()); ?>" rel="bookmark"><?php the_title(); ?></a>
-									</h2>
-								</article>
 
-						</div>
-					</div>
-					<div class="col-xs-6">
-						<div class="row post-three">
+					<h2 class="entry-title green">
+					    <a href="<?php the_permalink(); ?>" title="Permalink to: <?php esc_attr(the_title_attribute()); ?>" rel="bookmark"><?php the_title(); ?></a>
+					</h2>
+				</article>
 
-							<?php } elseif ($count === 3) { ?>
+			<?php } elseif ($count === 3) { ?>
 
-								<img class="post-three-img" src="" alt="">
-								<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-									<h2 class="entry-title">
-									    <a href="<?php the_permalink(); ?>" title="Permalink to: <?php esc_attr(the_title_attribute()); ?>" rel="bookmark"><?php the_title(); ?></a>
-									</h2>
-								</article>
+				<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+					
+					<?php 
+					if ( has_post_thumbnail() ) { // check if the post has a Post Thumbnail assigned to it.
+						the_post_thumbnail();
+					} else { ?>
+						<div class="filler-div"></div>
+					<?php } ?>
 
-						</div>
-						<div class="row post-four">
+					<h2 class="entry-title yellow">
+					    <a href="<?php the_permalink(); ?>" title="Permalink to: <?php esc_attr(the_title_attribute()); ?>" rel="bookmark"><?php the_title(); ?></a>
+					</h2>
+				</article>
 
-							<?php } elseif ($count === 4) { ?>
+			<?php } elseif ($count === 4) { ?>
 
-								<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-									<h2 class="entry-title">
-									    <a href="<?php the_permalink(); ?>" title="Permalink to: <?php esc_attr(the_title_attribute()); ?>" rel="bookmark"><?php the_title(); ?></a>
-									</h2>
-								</article>
-								<img class="post-four-img" src="" alt="">
+				<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+					<h2 class="entry-title blue">
+					    <a href="<?php the_permalink(); ?>" title="Permalink to: <?php esc_attr(the_title_attribute()); ?>" rel="bookmark"><?php the_title(); ?></a>
+					</h2>
+					
+					<?php 
+					if ( has_post_thumbnail() ) { // check if the post has a Post Thumbnail assigned to it.
+						the_post_thumbnail();
+					} else { ?>
+						<div class="filler-div"></div>
+					<?php } ?>
 
-						</div>
-						<div class="row post-five">
 
-							<?php } elseif ($count === 5) { ?>
+				</article>
+				
 
-								<img class="post-five-img" src="" alt="">
-								<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-									<h2 class="entry-title">
-									    <a href="<?php the_permalink(); ?>" title="Permalink to: <?php esc_attr(the_title_attribute()); ?>" rel="bookmark"><?php the_title(); ?></a>
-									</h2>
-								</article>
+			<?php } else { ?>
 
-						</div>
+				<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+	
+					<?php 
+					if ( has_post_thumbnail() ) { // check if the post has a Post Thumbnail assigned to it.
+						the_post_thumbnail();
+					} else { ?>
+						<div class="filler-div"></div>
+					<?php } ?>
 
-						<?php } else {
-							echo "That's it";
-						} ?>
+					<h2 class="entry-title orange">
+					    <a href="<?php the_permalink(); ?>" title="Permalink to: <?php esc_attr(the_title_attribute()); ?>" rel="bookmark"><?php the_title(); ?></a>
+					</h2>
+				</article>
 
-					</div>
-				</div>	
-			</div> <!-- closing div.container -->
-		</div> <!-- closing div.main -->
+			<?php } ?>
 
-<?php endwhile; // End the loop. Whew. ?>
+	<?php endwhile; // End the loop. Whew. ?>
 
 <?php // Display navigation to next/previous pages when applicable ?>
 
-<?php if (  $wp_query->max_num_pages > 1 ) : ?>
+
+<!--<?php if (  $wp_query->max_num_pages > 1 ) : ?>
   <p class="alignleft"><?php next_posts_link('&laquo; Older Entries'); ?></p>
   <p class="alignright"><?php previous_posts_link('Newer Entries &raquo;'); ?></p>
-<?php endif; ?>
+<?php endif; ?>-->

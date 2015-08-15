@@ -11,8 +11,11 @@ function theme_setup() {
 	*  a square size (also below). You can add more of your own crop
 	*  sizes with add_image_size. */
 	add_theme_support( 'post-thumbnails' );
-	set_post_thumbnail_size(120, 90, true);
+	set_post_thumbnail_size( 50, 50);
+	// set_post_thumbnail_size(120, 90, true);
 	add_image_size('square', 150, 150, true);
+	add_image_size('thumb', 50, 50, true);
+	
 
 
 	// Add default posts and comments RSS feed links to head
@@ -83,6 +86,16 @@ function wmpudev_enqueue_icon_stylesheet() {
 }
 
 add_action( 'wp_enqueue_scripts', 'wmpudev_enqueue_icon_stylesheet' );
+
+
+// Enqueu Google Fonts
+
+function wpb_add_google_fonts() {
+
+wp_register_style('wpb-googleFonts', 'http://fonts.googleapis.com/css?family=Playfair+Display:400,700,400italic|Roboto|Droid+Serif:400,400italic');
+            wp_enqueue_style( 'wpb-googleFonts');
+        }
+    add_action('wp_print_styles', 'wpb_add_google_fonts');
 
 // Setting up a logo uploader
 
@@ -297,3 +310,4 @@ function get_post_parent($post) {
 		return $post->ID;
 	}
 }
+
