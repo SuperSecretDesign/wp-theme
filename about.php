@@ -47,30 +47,30 @@ get_header();  ?>
 
         <div class="row clearfix about-team">
           <div class="row clearfix">
-            <div class="col-xs-12 col-sm-4">
+            <div class="col-xs-12 col-sm-12 col-md-4 about-team-players">
               <h3>Team Players</h3>
               <p>
                 We are a digital agency with 20 collective experience in advertising printing, digital, typesetting and apparel industry. 
               </p>
               <p>And Oh! We’re Hiring</p>
             </div>
-            <div class="col-xs-6 col-sm-4">
-              <img class="about-headshot" src=" <?php bloginfo('template_directory'); ?>/images/headshot1.jpg" alt="">
+            <div class="col-xs-6 col-sm-6 col-md-4 ">
+              <img class="about-headshot img-responsive" src=" <?php bloginfo('template_directory'); ?>/images/headshot1.jpg" alt="">
             </div>
-            <div class="col-xs-6 col-sm-4">
-              <img class="about-headshot" src=" <?php bloginfo('template_directory'); ?>/images/headshot1.jpg" alt="">
+            <div class="col-xs-6 col-sm-6 col-md-4 ">
+              <img class="about-headshot img-responsive" src=" <?php bloginfo('template_directory'); ?>/images/headshot1.jpg" alt="">
             </div>
           </div>
 
           <div class="row clearfix">
-            <div class="col-xs-6 col-sm-4">
-              <img class="about-headshot" src=" <?php bloginfo('template_directory'); ?>/images/headshot1.jpg" alt="">
+            <div class="col-xs-6 col-sm-6 col-md-4 ">
+              <img class="about-headshot img-responsive" src=" <?php bloginfo('template_directory'); ?>/images/headshot1.jpg" alt="">
             </div>
-            <div class="col-xs-6 col-sm-4">
-              <img class="about-headshot" src=" <?php bloginfo('template_directory'); ?>/images/headshot1.jpg" alt="">
+            <div class="col-xs-6 col-sm-6 col-md-4 ">
+              <img class="about-headshot img-responsive" src=" <?php bloginfo('template_directory'); ?>/images/headshot1.jpg" alt="">
             </div>
-            <div class="col-xs-6 col-sm-4">
-              <img class="about-headshot" src=" <?php bloginfo('template_directory'); ?>/images/headshot1.jpg" alt="">
+            <div class="col-xs-6 col-sm-6 col-md-4 ">
+              <img class="about-headshot img-responsive" src=" <?php bloginfo('template_directory'); ?>/images/headshot1.jpg" alt="">
             </div>
           </div>
         </div>

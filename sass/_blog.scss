@@ -9,7 +9,7 @@ h2.first {
 	width: 430px;
 	a {
 		text-decoration: none;
-		font-family: PlayfairDisplay;
+		font-family: 'Playfair Display', serif;
 		color:  #292f33;
 		font-size: 72px;/* Approximation due to font substitution */
 		font-weight: 400;
@@ -23,7 +23,7 @@ h2.first {
 }
 
 .excerpt-content p {
-	font-family: DroidSerif;
+	font-family: 'Droid Serif', serif;
 	color:  #66757f;
 	font-size: 16px;/* Approximation due to font substitution */
 	font-weight: 400;
@@ -43,7 +43,7 @@ h2.subsequent {
 }
 
 h2.subsequent a {
-	font-family: PlayfairDisplay;
+	font-family: 'Playfair Display', serif;
 	color:  #292f33;
 	font-size: 24px;/* Approximation due to font substitution */
 	font-weight: 400;
@@ -53,7 +53,7 @@ h2.subsequent a {
 }
 
 .sub-entry-meta p {
-	font-family: DroidSerif;
+	font-family: 'Droid Serif', serif;
 	color:  #ccd6dd;
 	font-size: 14px;/* Approximation due to font substitution */
 	font-style: italic;
