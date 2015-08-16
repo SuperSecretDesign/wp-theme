@@ -21,7 +21,7 @@
 <header>
   <div class="container">
     <div class="row clearfix pageHeader">
-      <div class="col-xs-4">
+      <div class="col-xs-12 col-sm-4 header-logo">
         <h1>
           <a href="<?php echo home_url( '/' ); ?>" title="<?php bloginfo( 'name', 'display' ); ?>" rel="home">
             <?php if ( get_theme_mod( 'themeslug_logo' ) ) : ?>
@@ -37,7 +37,7 @@
           </a>
         </h1>
       </div>
-      <div class="col-xs-8 vcenter">
+      <div class="col-xs-12 col-sm-8 vcenter">
         <?php wp_nav_menu( array(
           'container' => false,
           'theme_location' => 'primary'
