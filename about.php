@@ -33,14 +33,17 @@ get_header();  ?>
         <div class="row clearfix">
           <div class="col-xs-12 col-sm-4">
             <h5>Advertising</h5>
+            <div class="red-line"></div>
             <p>Your advertisement on the most optimal device for a better targetted audience & via a global market</p>
           </div>
           <div class="col-xs-12 col-sm-4">
             <h5>Branding</h5>
+            <div class="red-line"></div>
             <p>Design is the silent embassador of your brand and when it comes to branding, we own the game</p>
           </div>
           <div class="col-xs-12 col-sm-4">
             <h5>UI/UX Design</h5>
+            <div class="red-line"></div>
             <p>Design is the silent embassador of your  brand and when it comes to interface, we own the game</p>
           </div>
         </div>
