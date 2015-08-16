@@ -87,16 +87,19 @@ article.sub-post {
 	float: left;
 	width: 570px;
 	height: 270px;
-	background-color: #f3f6f8;
+}
+
+article.sub-post-right {
+	float: left;
+	width: 555px;
+	height: 270px;
+	margin-left: 15px;
 }
 
 article.sub-post-col {
-	// width: 25%;
-	// border:2px solid purple;
 	float: left;
 	height: 570px;
 	width: 270px;
-	background-color: #cad4db;
 }
 
 .title-mini {
@@ -117,12 +120,31 @@ figure.horizontal,
 	width: 300px;
 	height: 270px;
 	float: left;
+	img {
+		width: 300px;
+		height: 270px;
+	}
+}
+
+figure.horizontal-r,
+.filler-div-r {
+	width: 285px;
+	height: 270px;
+	float: left;
+	img {
+		width: 285px;
+		height: 270px;
+	}
 }
 
 figure.vertical,
 .filler-div-v {
 	width: 270px;
 	height: 300px;
+	img {
+		width: 270px;
+		height: 300px;
+	}
 }
 
 .filler-div {
@@ -131,4 +153,9 @@ figure.vertical,
 
 .margin-right {
 	margin-right: 15px;
+}
+
+.blog-padding {
+	padding-top: 100px;
+	padding-bottom: 100px;
 }

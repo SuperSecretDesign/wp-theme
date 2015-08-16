@@ -2,9 +2,11 @@
 <?php get_header(); ?>
 
 <div class="main">
-  <div class="container clearfix">
-    <?php get_template_part( 'loop', 'index' );	?>
-    <!-- <?php get_sidebar(); ?> -->
+  <div class="container">
+  	<div class="content-wrap clearfix blog-padding">
+	    <?php get_template_part( 'loop', 'index' );	?>
+	    <!-- <?php get_sidebar(); ?> -->
+	</div>    
   </div> <!-- /.container -->
 </div> <!-- /.main -->
 
