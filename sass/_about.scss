@@ -7,7 +7,7 @@ About Page Styling
 	padding: 30px 0;
 }
 .about h2 {
-	font-family: PlayfairDisplay;
+	font-family: 'Playfair Display', serif;
 	color:  #292f33;
 	font-size: 34px;/* Approximation due to font substitution */
 	font-weight: 400;
@@ -15,15 +15,15 @@ About Page Styling
 	text-align: left;
 }
 .about p {
-	font-family: DroidSerif;
-	color:  #66757f;
+	font-family: 'Droid Serif', serif;
+	color:  #9AA7B3;
 	font-size: 16px;/* Approximation due to font substitution */
 	font-weight: 400;
-	line-height: 32px;/* Approximation due to font substitution */
+	line-height: 26px;/* Approximation due to font substitution */
 	text-align: left;
 }
 .about h3 {
-	font-family: PlayfairDisplay;
+	font-family: 'Playfair Display', serif;
 	color:  #292f33;
 	font-size: 32px;/* Approximation due to font substitution */
 	font-weight: 400;
@@ -32,7 +32,7 @@ About Page Styling
 	margin: 5px 0;
 }
 .about h5 {
-	font-family: Roboto;
+	font-family: 'Roboto', sans-serif;
 	color:  #292f33;
 	font-size: 16px;/* Approximation due to font substitution */
 	font-weight: 700;
@@ -45,8 +45,17 @@ About Page Styling
 	padding: 30px 60px;
 }
 
+@media (max-width: 991px) {
+	.about-team-players {
+		padding: 10px 40px 20px;
+	}
+}
+
+
+
 .about-headshot {
 	border-radius: 50%;
+	padding: 10px;
 }
 
 .about-join {
