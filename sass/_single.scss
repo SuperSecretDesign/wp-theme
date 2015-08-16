@@ -13,13 +13,13 @@ Blog Post Styling
 
 .entry-meta {
 	display: inline-block;
-	font-family: DroidSerif;
+	font-family: 'Droid Serif', serif;
 	color:  #8899a6;
 	font-size: 16px;/* Approximation due to font substitution */
 	font-style: italic;
 	line-height: 32px;/* Approximation due to font substitution */
 	a {
-		font-family: DroidSerif;
+		font-family: 'Droid Serif', serif;
 		color:  #ff2641;
 		font-size: 16px;/* Approximation due to font substitution */
 		font-style: italic;
@@ -48,7 +48,7 @@ Blog Post Styling
 	}
 
 .entry-content {
-	font-family: DroidSerif;
+	font-family: 'Droid Serif', serif;
 	color:  #66757f;
 	font-size: 16px;/* Approximation due to font substitution */
 	font-weight: 400;
@@ -56,7 +56,7 @@ Blog Post Styling
 	text-align: left;
 	blockquote {
 		background: none;
-		font-family: PlayfairDisplay;
+		font-family: 'Playfair Display', serif;
 		color:  #292f33;
 		font-size: 36px;/* Approximation due to font substitution */
 		font-style: italic;
@@ -77,14 +77,14 @@ Blog Post Styling
 .tags {
 	text-align: left;
 	p {
-		font-family: DroidSerif;
+		font-family: 'Droid Serif', serif;
 		color:  #ccd6dd;
 		font-size: 16px;/* Approximation due to font substitution */
 		font-style: italic;
 		line-height: 38px;/* Approximation due to font substitution */
 	}
 	a {
-		font-family: DroidSerif;
+		font-family: 'Droid Serif', serif;
 		color:  #8899a6;
 		font-size: 14px;/* Approximation due to font substitution */
 		font-weight: 400;
@@ -102,7 +102,7 @@ Blog Post Styling
 	width: 266px;
 }
 .single-nav a {
-	font-family: PlayfairDisplay;
+	font-family: 'Playfair Display', serif;
 	color:  black;
 	font-size: 24px;/* Approximation due to font substitution */
 	font-weight: 400;
@@ -111,6 +111,7 @@ Blog Post Styling
 
 .author-info {
 	text-align:left;
+	margin-bottom: 100px;
 	// height: 350px;
 }
 
@@ -119,7 +120,7 @@ Blog Post Styling
 }
 
 .single-author {
-	font-family: PlayfairDisplay;
+	font-family: 'Playfair Display', serif;
 	color:  #292f33;
 	font-size: 24px;/* Approximation due to font substitution */
 	font-weight: 400;
@@ -127,7 +128,7 @@ Blog Post Styling
 }
 
 .single-bio {
-	font-family: DroidSerif;
+	font-family: 'Droid Serif', serif;
 	color:  #8899a6;
 	font-size: 14px;/* Approximation due to font substitution */
 	font-weight: 400;
