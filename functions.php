@@ -14,10 +14,11 @@ function theme_setup() {
 	// set_post_thumbnail_size(266, 200, true);
 	// set_post_thumbnail_size(200, 0, true);
 	add_image_size('square', 150, 150, true);
-	add_image_size('thumb', 50, 50, true);
+	// add_image_size('thumb', 50, 50, true);
+	add_image_size( 'two_three_thumb', 270, 300, true );
+	add_image_size( 'four_thumb', 300, 270, true );
+	add_image_size( 'five_thumb', 285, 270, true );
 	
-
-
 	// Add default posts and comments RSS feed links to head
 	add_theme_support( 'automatic-feed-links' );
 
@@ -127,6 +128,26 @@ function themeslug_theme_customizer( $wp_customize ) {
 }
 add_action( 'customize_register', 'themeslug_theme_customizer' );
 
+// Setting up a footer logo uploader
+
+function themeslug_theme_customizer_footer( $wp_customize ) {
+    
+	$wp_customize->add_section( 'themeslug_logo_section_footer' , array(
+	    'title'       => __( 'Logo_footer', 'themeslug_footer' ),
+	    'priority'    => 30,
+	    'description' => 'Upload a logo to replace the default site name and description in the header',
+	) );
+
+	$wp_customize->add_setting( 'themeslug_logo_footer' );
+
+	$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'themeslug_logo_footer', array(
+	    'label'    => __( 'Logo_footer', 'themeslug_footer' ),
+	    'section'  => 'themeslug_logo_section_footer',
+	    'settings' => 'themeslug_logo_footer',
+	) ) );
+
+}
+add_action( 'customize_register', 'themeslug_theme_customizer_footer' );
 
 // Related posts by the same author
 function get_related_author_posts() {
