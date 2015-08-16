@@ -11,6 +11,7 @@
 .vcenter {
     position: relative;
     top: 40px;
+    text-align: right;
 }
 
 .toggleSearch {
@@ -18,4 +19,15 @@
 	&:hover {
 		color:grey;
 	}
+}
+
+.site-logo img {
+	margin: 0;
+}
+
+#searchform {
+	display: inline-block;
+}
+#menu-header-menu {
+	display: inline-block;
 }

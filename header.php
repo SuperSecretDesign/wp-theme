@@ -37,16 +37,17 @@
           </a>
         </h1>
       </div>
-      <div class="col-xs-5 vcenter text-center">
+      <div class="col-xs-8 vcenter">
         <?php wp_nav_menu( array(
           'container' => false,
           'theme_location' => 'primary'
         )); ?>
-      </div>
-      <div class="col-xs-3 vcenter">
         <?php get_search_form();?>
       </div>
-    </div>
+      <!-- <div class="col-xs-3 vcenter">
+        <?php get_search_form();?>
+      </div>
+ -->    </div>
 
   </div> <!-- /.container -->
 </header><!--/.header-->
