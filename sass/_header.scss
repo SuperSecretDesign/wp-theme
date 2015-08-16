@@ -10,8 +10,17 @@
 }
 .vcenter {
     position: relative;
-    top: 40px;
+    top: 75px;
     text-align: right;
+}
+@media (max-width: 767px) {
+	.header-logo {
+		text-align: center;
+	}
+	.vcenter {
+		position: static;
+		text-align: center;
+	}
 }
 
 .toggleSearch {
