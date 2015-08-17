@@ -157,6 +157,7 @@ article.sub-post {
 		height: 270px;
 		width: 570px;
 		float: none;
+		clear:both;
 	}
 }
 
@@ -171,10 +172,11 @@ article.sub-post-right {
 	}
 	@media (max-width: 1000px) {
 		height: 270px;
-		width: 555px;
+		width: 575px;
 		float: none;
 		margin-left: 0;
-		margin-right: 0;
+		margin-top: 30px;
+		clear:both;
 	}
 }
 
@@ -258,7 +260,7 @@ figure.horizontal-r,
 		}
 		@media (max-width: 1000px) {
 			height: 270px;
-			width: 285px;
+			width: 300px;
 		}
 	}
 	@media (max-width: 1150px) {
@@ -267,7 +269,7 @@ figure.horizontal-r,
 	}
 	@media (max-width: 1000px) {
 		height: 270px;
-		width: 285px;
+		width: 300px;
 	}
 }
 
