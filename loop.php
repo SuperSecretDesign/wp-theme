@@ -24,7 +24,8 @@
 <?php
 	$classes_two = array(
 		'sub-post-col',
-		'margin-right'
+		'margin-right',
+		'clearfix'
 	);
 ?>
 
@@ -124,6 +125,14 @@
 		<?php } else { ?>
 
 			<article id="post-<?php the_ID(); ?>" <?php post_class( $classes_three ); ?>>
+				<figure class="horizontal-r">
+					<?php 
+					if ( has_post_thumbnail() ) { // check if the post has a Post Thumbnail assigned to it.
+						the_post_thumbnail('five_thumb');
+					} else { ?>
+						<div class="filler-div filler-div-r"></div>
+					<?php } ?>
+				</figure>
 				<div class="title-mini title-mini-float">
 					<div class="sub-entry-meta">
 					<p><?php echo human_time_diff( get_the_time('U'), current_time('timestamp') ) . ' ago'; ?>, By <a href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ) ); ?>"><?php the_author(); ?></a>  </p>
@@ -133,14 +142,6 @@
 					    <a href="<?php the_permalink(); ?>" title="Permalink to: <?php esc_attr(the_title_attribute()); ?>" rel="bookmark"><?php the_title(); ?></a>
 					</h2>
 				</div>
-				<figure class="horizontal-r">
-					<?php 
-					if ( has_post_thumbnail() ) { // check if the post has a Post Thumbnail assigned to it.
-						the_post_thumbnail('five_thumb');
-					} else { ?>
-						<div class="filler-div filler-div-r"></div>
-					<?php } ?>
-				</figure>
 			</article>
 
 		<?php } ?>
