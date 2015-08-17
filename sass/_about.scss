@@ -82,6 +82,17 @@ About Page Styling
 		font-weight: 400;
 		line-height: 22px;/* Approximation due to font substitution */
 	}
+	a {
+		margin-top: 15px;
+		padding: 15px;
+		background: #1F2327;
+		color: white;
+		&:hover {
+			background: white;
+			color: #1F2327;
+			border: 2px solid #1F2327;
+		}
+	}
 }
 .about-quotes {
 	padding: 20px 0;
