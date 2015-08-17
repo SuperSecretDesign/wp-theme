@@ -46,21 +46,23 @@
               $prevPost = get_previous_post();
               $prevthumbnail = get_the_post_thumbnail($prevPost->ID, 'medium'); ?>
               <p class="nav-previous"><?php previous_post_link('%link',$prevthumbnail); ?></p>
-              <p class="nav-previous"><?php previous_post_link('%link','&larr; %title'); ?></p>
+              <p class="nav-previous single-nav-text"><?php previous_post_link('%link','&larr; %title'); ?></p>
+              <!-- <p class="single-arrow single-arrow-left">&larr;</p> -->
             </div>
             <div class="col-xs-12 col-sm-6 single-nav">
             <?php
               $nextPost = get_next_post();
               $nextthumbnail = get_the_post_thumbnail($nextPost->ID, 'medium'); ?>
-              <p class="nav-next"><?php next_post_link('%link', $nextthumbnail, '%title &rarr;'); ?></p> 
-              <p class="nav-next"><?php next_post_link('%link', '%title &rarr;'); ?></p> 
+              <p class="nav-next"><?php next_post_link('%link', $nextthumbnail); ?></p> 
+              <p class="nav-next single-nav-text"><?php next_post_link('%link', '%title &rarr;'); ?></p> 
+              <!-- <p class="single-arrow single-arrow-right">&rarr;</p> -->
             </div>
           </div>
         </div><!-- #nav-below -->
 
         <div class="author-info">
           <div class="row clearfix">
-            <div class="col-xs-12 col-sm-6">
+            <div class="col-xs-8 col-sm-6">
               <div class="row">
                 <p><?php echo get_avatar( get_the_author_meta( 'ID' ), 100); ?><p>
               </div>
