@@ -17,10 +17,13 @@ About Page Styling
 .about p {
 	font-family: 'Droid Serif', serif;
 	color:  #9AA7B3;
-	font-size: 16px;/* Approximation due to font substitution */
+	font-size: 14px;/* Approximation due to font substitution */
 	font-weight: 400;
-	line-height: 26px;/* Approximation due to font substitution */
+	line-height: 22px;/* Approximation due to font substitution */
 	text-align: left;
+	&:hover {
+
+	}
 }
 .about h3 {
 	font-family: 'Playfair Display', serif;
@@ -49,6 +52,10 @@ About Page Styling
 .about-team {
 	background: #F3F6F9;
 	padding: 30px 60px;
+	a {
+		color: red;
+		text-decoration: underline;
+	}
 }
 
 @media (max-width: 991px) {
@@ -66,4 +73,23 @@ About Page Styling
 
 .about-join {
 	padding: 50px 0;
+	text-align: center;
+	blockquote {
+		font-style: italic;
+		font-family: 'Droid Serif', serif;
+		color:  #9AA7B3;
+		font-size: 14px;/* Approximation due to font substitution */
+		font-weight: 400;
+		line-height: 22px;/* Approximation due to font substitution */
+	}
 }
+.about-quotes {
+	padding: 20px 0;
+	border: 1px solid red;
+}
+p.about-quote-author {
+	display: inline-block;
+	margin: 0 auto;
+	color: #C0CBD3;
+}
+

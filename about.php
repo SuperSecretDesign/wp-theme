@@ -50,30 +50,30 @@ get_header();  ?>
 
         <div class="row clearfix about-team">
           <div class="row clearfix">
-            <div class="col-xs-12 col-sm-12 col-md-4 about-team-players">
+            <div class="col-xs-12 col-sm-12 col-md-4 about-team-players ">
               <h3>Team Players</h3>
               <p>
                 We are a digital agency with 20 collective experience in advertising printing, digital, typesetting and apparel industry. 
               </p>
-              <p>And Oh! We’re Hiring</p>
+              <p>And Oh! <a href="#">We’re Hiring</a></p>
             </div>
             <div class="col-xs-6 col-sm-6 col-md-4 ">
-              <img class="about-headshot img-responsive" src=" <?php bloginfo('template_directory'); ?>/images/headshot1.jpg" alt="">
+              <img class="about-headshot" src=" <?php bloginfo('template_directory'); ?>/images/headshot1.jpg" alt="">
             </div>
             <div class="col-xs-6 col-sm-6 col-md-4 ">
-              <img class="about-headshot img-responsive" src=" <?php bloginfo('template_directory'); ?>/images/headshot1.jpg" alt="">
+              <img class="about-headshot" src=" <?php bloginfo('template_directory'); ?>/images/headshot1.jpg" alt="">
             </div>
           </div>
 
           <div class="row clearfix">
             <div class="col-xs-6 col-sm-6 col-md-4 ">
-              <img class="about-headshot img-responsive" src=" <?php bloginfo('template_directory'); ?>/images/headshot1.jpg" alt="">
+              <img class="about-headshot" src=" <?php bloginfo('template_directory'); ?>/images/headshot1.jpg" alt="">
             </div>
             <div class="col-xs-6 col-sm-6 col-md-4 ">
-              <img class="about-headshot img-responsive" src=" <?php bloginfo('template_directory'); ?>/images/headshot1.jpg" alt="">
+              <img class="about-headshot" src=" <?php bloginfo('template_directory'); ?>/images/headshot1.jpg" alt="">
             </div>
             <div class="col-xs-6 col-sm-6 col-md-4 ">
-              <img class="about-headshot img-responsive" src=" <?php bloginfo('template_directory'); ?>/images/headshot1.jpg" alt="">
+              <img class="about-headshot" src=" <?php bloginfo('template_directory'); ?>/images/headshot1.jpg" alt="">
             </div>
           </div>
         </div>
@@ -84,10 +84,12 @@ get_header();  ?>
             Let's work together</h3>
             <a href="#">Get in touch</a>
           </div>
-          <div class="col-xs-12 col-sm-6">
-            <p>
+          <div class="col-xs-12 col-sm-6 about-quotes">
+            <blockquote>
               They listened to our ideas and objectives then produced a website that has been key competitive advantage in the whole industry
-            </p>
+            </blockquote>
+            <p class="about-quote-author">-Corleone Clothing</p>
+            
           </div>
         </div>
 
