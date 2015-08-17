@@ -81,7 +81,7 @@ get_header();  ?>
         <div class="row clearfix about-join">
           <div class="col-xs-12 col-sm-6">
             <h3>Join the league!<br>
-            Let's work together</h3>
+            Let's work together</h3><br>
             <a href="#">Get in touch</a>
           </div>
           <div class="col-xs-12 col-sm-6 about-quotes">
