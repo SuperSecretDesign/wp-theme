@@ -4,10 +4,14 @@ footer {
 		text-align: center;
 		#menu-footer-menu {
 			padding-left: 0;
-			li a {
+			li {
+				color: #b5c2ca;
+				font-size: 16px;
+				margin:0 15px;
+				a {
 				display: none;
-				// text-indent: -9999px;
-			}
+				}
+			} 
 		}
 	}
 }
