@@ -12,7 +12,7 @@ Blog Post Styling
 }
 
 .entry-meta {
-	display: inline-block;
+	// display: inline-block;
 	font-family: 'Droid Serif', serif;
 	color:  #8899a6;
 	font-size: 16px;/* Approximation due to font substitution */
@@ -41,7 +41,7 @@ Blog Post Styling
 		position: relative;
 		bottom: 3px;
 		right: 70px;
-	}
+}
 .entry-meta p::after {
 		content: "  ";
 		display: inline-block;
@@ -51,7 +51,30 @@ Blog Post Styling
 		position: relative;
 		bottom: 3px;
 		left: 70px;
+}
+
+@media (max-width: 518px) {
+	.entry-meta p::before {
+		right: 40px;
+		width: 50px;
 	}
+	.entry-meta p::after {
+		left: 40px;
+		width:50px;
+	}
+}
+
+@media (max-width: 398px) {
+	.entry-meta p::before {
+		right: 20px;
+		width: 20px;
+	}
+	.entry-meta p::after {
+		left: 20px;
+		width:20px;
+	}
+}
+
 
 .entry-content {
 	font-family: 'Droid Serif', serif;
